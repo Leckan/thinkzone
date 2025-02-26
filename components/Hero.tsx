@@ -23,7 +23,7 @@ function Hero() {
       </div>
 
       <div
-        className="h-screen w-full dark:bg-black-100 bg-white  dark:bg-grid-white/[0.03] bg-grid-black/[0.2]
+        className="h-screen w-full dark:bg-black-100 bg-white  dark:bg-grid-white/[0.03] bg-grid-black-100/[0.2]
         flex items-center justify-center absolute top-0 left-0"
       >
         {/* Radial gradient for the container to give a faded look */}
@@ -34,7 +34,7 @@ function Hero() {
       </div>
 
       <div className="flex justify-center relative my-20 z-10">
-        <div className="max-w-[89vw] items-center justify-center flex flex-col">
+        <div className="max-w-[89vw]  items-center justify-center flex flex-col">
           <BackgroundGradient className="rounded-[22px] max-w-sm p-5 sm:p-5 bg-white dark:bg-zinc-900">
             <Image
               src={`/thinkzone1.png`}
@@ -49,7 +49,7 @@ function Hero() {
             className="text-center textt-[40px] md:text-5xl lg:text-6xl"
             words="AI Solutions for a Smarter Future."
           />
-          <p className="text-center mt-4 md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
+          <p className="text-center  md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
           Artificial Intelligence | Data Analytics | Process Automation
           </p>
           <a href="/about">
