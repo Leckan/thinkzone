@@ -39,8 +39,8 @@ function Hero() {
             <Image
               src={`/thinkzone1.png`}
               alt="Think Zone Technology"
-              height="140"
-              width="140"
+              height="160"
+              width="160"
               className="object-contain rounded-xl"
             />
           </BackgroundGradient>
