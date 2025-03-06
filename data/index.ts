@@ -1,3 +1,4 @@
+
 export const navItems = [
     { name: "About", link: "#about" },
     { name: "Projects", link: "#projects" },
@@ -5,12 +6,6 @@ export const navItems = [
     { name: "Contact", link: "#contact" },
   ];
   
-  export const navItems2 =[
-    {name: 'Home', link: '/', icon:'<FaHome/>'},
-    {name: 'About', link: '/about', icon:'<FaInfo/>'},
-    {name: 'Projects', link: '/projects', icon: '<FaBriefcase/>'},
-    {name: 'Contact', link: '/contact', icon: '<FaPhone/>'},
-  ];
   export const gridItems = [
     {
       id: 1,
@@ -211,13 +206,19 @@ export const navItems = [
     {
       id: 1,
       img: "/git.svg",
+      name: "github",
+      link: "https://github.com/Leckan",
     },
     {
       id: 2,
       img: "/twit.svg",
+      name: "twitter",
+      link: "https://x.com/Leckan_M",
     },
     {
       id: 3,
       img: "/link.svg",
+      name: "linkedin",
+      link: "https://www.linkedin.com/in/leckan/",
     },
   ];

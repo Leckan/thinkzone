@@ -52,7 +52,7 @@ function Hero() {
           <p className="text-center  md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
           Artificial Intelligence | Data Analytics | Process Automation
           </p>
-          <a href="/about">
+          <a href="/#about">
             <MagicButton
               title="Show Projects"
               icon={<FaLocationArrow />}

@@ -10,6 +10,14 @@ import {
 } from "framer-motion";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
+import { FaBriefcase, FaHome, FaInfo, FaPhone } from "react-icons/fa";
+
+export const navItems2 =[
+  {name: 'Home', link: '/', icon:<FaHome/>},
+  {name: 'About', link: '#about', icon:<FaInfo/>},
+  {name: 'Projects', link: '#projects', icon: <FaBriefcase/>},
+  {name: 'Contact', link: '#contact', icon: <FaPhone/>},
+];
 
 export const FloatingNav = ({
   navItems,
@@ -62,12 +70,12 @@ export const FloatingNav = ({
           className
         )}
       >
-        {navItems.map((navItem: any, idx: number) => (
+        {navItems2.map((navItem: any, idx: number) => (
           <Link
             key={`link=${idx}`}
             href={navItem.link}
             className={cn(
-              "relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500"
+              "relative dark:text-neutral-50 items-center flex space-x-1 text-neutral-600 dark:hover:text-neutral-300 hover:text-neutral-500 !cursor-pointer"
             )}
           >
             <span className="block sm:hidden">{navItem.icon}</span>
