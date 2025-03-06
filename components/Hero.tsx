@@ -6,6 +6,7 @@ import { TextGenerateEffect } from "./ui/text-generate-effect";
 import MagicButton from "./ui/MagicButton";
 import { FaLocationArrow } from "react-icons/fa";
 import { BackgroundGradient } from "./ui/background-gradient";
+import Link from "next/link";
 
 function Hero() {
   return (
@@ -52,13 +53,13 @@ function Hero() {
           <p className="text-center  md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
           Artificial Intelligence | Data Analytics | Process Automation
           </p>
-          <a href="/#about">
+          <Link href="/#about">
             <MagicButton
               title="Show Projects"
               icon={<FaLocationArrow />}
               position="right"
             />
-          </a>
+          </Link>
         </div>
       </div>
     </div>
