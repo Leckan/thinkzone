@@ -15,7 +15,7 @@ const Footer = () => {
           Unlock <span className='text-purple'>AI-Powered</span> growth for your business
         </h1>
         <p className="text-white-200 md:mt-10 my-5 text-center">Reach out to us today and let&apos;s discuss how we can help you achieve your goals </p>
-        <Link href="mailto:info@thinkzone.tech">
+        <Link href="mailto:info@thinkzonellc.com">
           <MagicButton title="Let's get in touch"
           icon={<FaLocationArrow />} position='right'
           />
