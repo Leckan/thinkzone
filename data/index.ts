@@ -77,7 +77,7 @@ export const navItems = [
       des: "Elevate your spaces with captivating AI-driven redesigns",
       img: "/pp1.png",
       iconLists: ["/re.svg", "/tail.svg", "/ts.svg", "/three.svg", "/fm.svg"],
-      link: "https://main.d1fen6qfb1gu13.amplifyapp.com/",
+      link: "https://ai-space-revamp.vercel.app/",
     },
     {
       id: 2,
