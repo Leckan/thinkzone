@@ -1,13 +1,25 @@
 import type { Config } from "tailwindcss";
 const svgToDataUri = require("mini-svg-data-uri");
 
-const colors = require("tailwindcss/colors");
-const {
-  default: flattenColorPalette,
-} = require("tailwindcss/lib/util/flattenColorPalette");
+// Tailwind v4 dropped the internal `tailwindcss/lib/util/flattenColorPalette`
+// export, so keep a local copy of the v3 implementation.
+function flattenColorPalette(
+  colors: Record<string, any> = {}
+): Record<string, string> {
+  return Object.assign(
+    {},
+    ...Object.entries(colors).flatMap(([color, values]) =>
+      typeof values === "object" && values !== null
+        ? Object.entries(flattenColorPalette(values)).map(([key, value]) => ({
+            [color + (key === "DEFAULT" ? "" : `-${key}`)]: value,
+          }))
+        : [{ [color]: values }]
+    )
+  );
+}
 
 export default {
-    darkMode: ["class"],
+    darkMode: "class",
     content: [
     "./pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./components/**/*.{js,ts,jsx,tsx,mdx}",

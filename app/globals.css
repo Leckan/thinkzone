@@ -1,6 +1,7 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+/* Keep the v3-style JS config (theme, plugins, content globs) under Tailwind v4. */
+@config "../tailwind.config.ts";
 
 @layer base {
   :root {
@@ -83,7 +84,7 @@
 
 @layer base {
   * {
-    @apply border-border !scroll-smooth;
+    @apply border-border scroll-smooth!;
   }
   body {
     @apply bg-background text-foreground;

@@ -1,16 +1,15 @@
-import { dirname } from "path";
-import { fileURLToPath } from "url";
-import { FlatCompat } from "@eslint/eslintrc";
+import nextCoreWebVitals from "eslint-config-next/core-web-vitals";
+import nextTypeScript from "eslint-config-next/typescript";
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
-
-const compat = new FlatCompat({
-  baseDirectory: __dirname,
-});
-
+// eslint-config-next 16 ships native flat configs, so the old FlatCompat
+// (@eslint/eslintrc) wrapper is no longer needed — and breaks under ESLint 10.
 const eslintConfig = [
-  ...compat.extends("next/core-web-vitals", "next/typescript"),
+  { ignores: [".next/**", "out/**", "next-env.d.ts"] },
+  ...nextCoreWebVitals,
+  ...nextTypeScript,
+  // eslint-plugin-react's auto-detection calls `context.getFilename()`, removed
+  // in ESLint 10. Pinning the version explicitly skips that code path.
+  { settings: { react: { version: "19.2" } } },
 ];
 
 export default eslintConfig;
