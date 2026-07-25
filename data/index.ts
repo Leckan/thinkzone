@@ -97,11 +97,11 @@ export const navItems = [
     },
     {
       id: 4,
-      title: "AI - Real Estate Deal Analyzer",
-      des: "Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..",
-      img: "/pp4.png",
-      iconLists: ["/next.svg", "/tail.svg", "/ts.svg", "/three.svg", "/gsap.svg"],
-      link: "https://chatgpt.com/g/g-yO0DPhqwk-real-estate-deal-analyzer",
+      title: "AI - Digital Twin",
+      des: "AI Digital Twin for Ahmed Mustapha",
+      img: "/pp5.png",
+      iconLists: ["/python.svg", "/hf.svg", "/git.svg", "/cloud.svg", "/stream.svg"],
+      link: "https://leckan-twin.hf.space",
     },
   ];
   
