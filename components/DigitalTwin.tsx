@@ -1,6 +1,9 @@
 import React from "react";
+import { FaPhoneAlt } from "react-icons/fa";
 
 const TWIN_URL = "https://leckan-twin.hf.space";
+const VOICE_AGENT_TEL = "+17476009691";
+const VOICE_AGENT_DISPLAY = "+1 (747) 600 9691";
 
 const DigitalTwin = () => {
   return (
@@ -14,6 +17,24 @@ const DigitalTwin = () => {
         by a Gradio Space on Hugging Face — the first reply may take a moment
         while the Space wakes up.
       </p>
+
+      <div className="mt-8 flex justify-center">
+        <a
+          href={`tel:${VOICE_AGENT_TEL}`}
+          aria-label={`Call Think Zone Assistant, our AI voice agent, at ${VOICE_AGENT_DISPLAY}`}
+          className="inline-flex flex-wrap items-center justify-center gap-x-3 gap-y-1 rounded-full border border-white/[0.1] bg-[#04071D] px-6 py-3 text-center transition-colors hover:border-purple/50"
+        >
+          <FaPhoneAlt className="text-purple shrink-0" aria-hidden="true" />
+          <span className="text-white-200 md:text-base text-sm">
+            Prefer to talk? Call{" "}
+            <span className="text-white">Think Zone Assistant</span>, our AI
+            voice agent, at{" "}
+            <span className="text-purple font-semibold whitespace-nowrap">
+              {VOICE_AGENT_DISPLAY}
+            </span>
+          </span>
+        </a>
+      </div>
 
       <div className="mt-10 flex justify-center">
         <div className="relative w-full max-w-4xl overflow-hidden rounded-3xl border border-white/[0.1] bg-[#04071D] shadow-xs">
