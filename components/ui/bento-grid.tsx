@@ -2,8 +2,13 @@
 import { cn } from "@/lib/utils";
 import { BackgroundGradientAnimation } from "./background-gradient-animation";
 import { GlobeDemo } from "./GridGlobe";
-import Lottie from "react-lottie";
+import dynamic from "next/dynamic";
 import { useState } from "react";
+
+// react-lottie pulls in lottie-web, which touches `document` at import time.
+// Loading it client-side only keeps the prerender pass from blowing up.
+const Lottie = dynamic(() => import("react-lottie"), { ssr: false });
+
 import animationData from "@/data/confetti.json";
 import MagicButton from "./MagicButton";
 import { IoCopyOutline } from "react-icons/io5";
